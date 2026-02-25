@@ -1,0 +1,51 @@
+Git is a version control system that tracks every change we make on the files, allowing us to rollback if required, experiment without fear, and collaborate with others without overwriting their work.
+
+Git and GitHub. Git is the local tool you use on your computer; GitHub is a website that hosts your Git repositories in the cloud.
+		
+
+               Working Directory			--> Staging Area 			--> 	Local Repository				Remote Repository
+		
+		file1.txt		  ------------->  file1.txt  -------------->	 file1.txt 	----------->   
+							git add 					git commit
+		
+git init
+git config --global user.name "Thamarai"
+git config --global user.email "thamarai.kannan@nab.com.au"
+
+git status -> get the current status of repository
+git ls-files
+
+git clone  -> To Copy/Clone the entire remote repository to Local Machine
+			
+git add 		-> To Add the changes from working directory to staging area 
+git add .
+git add <file name>
+	
+git commit 		-> To Commit the changes from staging area to local repository
+git commit -m "message by Thamarai"
+
+
+git log
+git log -3
+
+git log --oneline
+git log --oneline -5
+
+git show <commitid>
+git reset  		
+- Git Reset is set to Undo the committed changes 
+- Git Reset is sed to Undo the committed changes 
+- It used to take the HEAD Pointer back to previous commit point 
+- git reset will never create any new commit point for tracking 
+- So, it is not recommended to use git reset in the Shared Repositories
+
+
+Unstage:
+		
+git rm --cached f1.txt 			# Remove the changes from staging area and take the changes back to working directory
+		
+git rm -f f1.txt				# Permanently remove the file
+
+
+
+
